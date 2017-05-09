@@ -1,51 +1,20 @@
-#N canvas -1113 109 707 811 10;
-#X obj 426 551 bp~, f 5;
-#X obj 270 683 *~;
-#X obj 269 718 dac~;
-#X obj 576 467 / 127;
-#X obj 557 326 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
-#X obj 399 427 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 8600 1;
-#X obj 396 456 mtof;
-#X obj 533 326 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+#N canvas 395 155 1478 1018 10;
+#X obj 478 480 bp~, f 5;
+#X obj 618 427 / 127;
+#X obj 609 255 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 426 573 /~ 2;
-#X obj 157 627 bp~, f 5;
-#X obj 307 543 / 127;
-#X obj 288 402 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
-#X obj 130 498 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 8900 1;
-#X obj 127 532 mtof;
-#X obj 264 402 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 585 255 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 223 650 /~ 2;
-#X obj 259 251 phasor~;
-#X obj 245 181 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4000 1;
-#X obj 274 210 mtof;
-#X obj 170 544 expr (($f1/127)*100);
-#X obj 439 468 expr (($f1/127)*100);
-#X connect 0 0 8 0;
-#X connect 1 0 2 0;
-#X connect 1 0 2 1;
-#X connect 3 0 8 1;
-#X connect 4 0 3 0;
-#X connect 5 0 6 0;
-#X connect 6 0 0 1;
-#X connect 7 0 20 0;
-#X connect 8 0 1 0;
-#X connect 9 0 15 0;
-#X connect 10 0 15 1;
-#X connect 11 0 10 0;
-#X connect 12 0 13 0;
-#X connect 13 0 9 1;
-#X connect 14 0 19 0;
-#X connect 15 0 1 0;
-#X connect 16 0 0 0;
-#X connect 16 0 9 0;
-#X connect 17 0 18 0;
-#X connect 18 0 16 0;
-#X connect 19 0 9 2;
-#X connect 20 0 0 2;
+#X obj 478 512 *~;
+#X obj 485 427 expr (($f1/127)*10);
+#X obj 388 426 inlet~;
+#X obj 477 582 outlet~;
+#X obj 460 348 inlet;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 0 2;
+#X connect 6 0 0 0;
+#X connect 8 0 0 1;
